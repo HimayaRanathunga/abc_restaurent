@@ -70,6 +70,36 @@
   	<description></description>
   	<servlet-class>com.abc.controller.CartController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ContactController</servlet-name>
+  	<display-name>ContactController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.ContactController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminController</servlet-name>
+  	<display-name>AdminController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.AdminController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AboutController</servlet-name>
+  	<display-name>AboutController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.AboutController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FeatureController</servlet-name>
+  	<display-name>FeatureController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.FeatureController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FeatureUserController</servlet-name>
+  	<display-name>FeatureUserController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.FeatureUserController</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ProductController</servlet-name>
   	<url-pattern>/ProductController</url-pattern>
@@ -113,5 +143,25 @@
   <servlet-mapping>
   	<servlet-name>CartController</servlet-name>
   	<url-pattern>/CartController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ContactController</servlet-name>
+  	<url-pattern>/ContactController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminController</servlet-name>
+  	<url-pattern>/AdminController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AboutController</servlet-name>
+  	<url-pattern>/AboutController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FeatureController</servlet-name>
+  	<url-pattern>/FeatureController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FeatureUserController</servlet-name>
+  	<url-pattern>/FeatureUserController</url-pattern>
   </servlet-mapping>
 </web-app>

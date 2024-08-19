@@ -269,6 +269,18 @@
             </div>
         </div>
         
+        
+         <div class="card">
+            <div class="card-header">
+                <h3>Feature Management</h3>
+            </div>
+            <div class="card-body">
+                <a href="featuresadmin" class="btn btn-primary">View All Feature</a>
+                <a href="featuresadmin?action=new" class="btn btn-success mt-3">Add New Feature</a>
+            </div>
+        </div>
+        
+        
         <!-- Gallery Management Section -->
         <div class="card">
             <div class="card-header">
@@ -277,6 +289,17 @@
             <div class="card-body">
                 <a href="gallery" class="btn btn-primary">View All Gallery</a>
                 <a href="gallery?action=new" class="btn btn-success mt-3">Add New Gallery</a>
+            </div>
+        </div>
+        
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Message Management</h3>
+            </div>
+            <div class="card-body">
+                <a href="adminmessages" class="btn btn-primary">View All Message</a>
+              
             </div>
         </div>
 
