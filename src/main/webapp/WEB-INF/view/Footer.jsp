@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <div class="footer-contact">
                                     <h2>Our Address</h2>
-                                    <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                    <p><i class="fa fa-map-marker-alt"></i> 27/2, Helbodagama </p>
                                     <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
                                     <p><i class="fa fa-envelope"></i>info@example.com</p>
                                     <div class="footer-social">
