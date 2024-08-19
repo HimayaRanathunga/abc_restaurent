@@ -39,8 +39,8 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="index" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="feature.html" class="nav-item nav-link">Feature</a>
+                        <a href="about" class="nav-item nav-link">About</a>
+                        <a href="features" class="nav-item nav-link">Feature</a>
                        
                         <a href="menu" class="nav-item nav-link">Menu</a>
                         <a href="booking" class="nav-item nav-link">Booking</a>

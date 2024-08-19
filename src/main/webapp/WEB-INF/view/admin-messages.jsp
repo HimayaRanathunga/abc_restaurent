@@ -10,7 +10,7 @@
 <body>
     <div class="container mt-5">
         <h2>Contact Messages</h2>
-         <a href="/dashbord.jsp" class="btn btn-primary mb-3">Back</a>
+         <a href="dashbord.jsp" class="btn btn-primary mb-3">Back</a>
         <table class="table table-striped">
             <thead>
                 <tr>
