@@ -13,6 +13,9 @@
     <title>Admin Panel</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <style>
         /* General Styling */
@@ -104,6 +107,10 @@
             justify-content: center;
             width: 30%;
             transition: background-color 0.3s ease;
+        }
+
+        .card-header i {
+            margin-right: 10px; /* Space between icon and text */
         }
 
         .card-header:hover {
@@ -233,7 +240,7 @@
         <!-- User Management Section -->
         <div class="card">
             <div class="card-header">
-                <h3>User Management</h3>
+                <i class="fas fa-users"></i> User Management
             </div>
             <div class="card-body">
                 <a href="user" class="btn btn-primary">View All Users</a>
@@ -244,7 +251,7 @@
         <!-- Food Management Section -->
         <div class="card">
             <div class="card-header">
-                <h3>Food Management</h3>
+                <i class="fas fa-utensils"></i> Food Management
             </div>
             <div class="card-body">
                 <a href="product" class="btn btn-primary">View All Food</a>
@@ -255,7 +262,7 @@
         <!-- Reservation Management Section -->
         <div class="card">
             <div class="card-header">
-                <h3>Reservation Management</h3>
+                <i class="fas fa-calendar-alt"></i> Reservation Management
             </div>
             <div class="card-body">
                 <a href="adminBooking" class="btn btn-primary">View All Reservations</a>
@@ -265,7 +272,7 @@
         <!-- Gallery Management Section -->
         <div class="card">
             <div class="card-header">
-                <h3>Gallery Management</h3>
+                <i class="fas fa-images"></i> Gallery Management
             </div>
             <div class="card-body">
                 <a href="gallery" class="btn btn-primary">View All Gallery</a>
@@ -274,7 +281,11 @@
         </div>
 
         <!-- Logout Button -->
-        <a href="index" class="btn btn-danger mt-4">Logout</a>
+        <a href="index" class="btn btn-danger mt-4 d-block">Logout</a>
     </div>
+
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
