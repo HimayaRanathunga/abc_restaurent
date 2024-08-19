@@ -42,7 +42,7 @@
                         <div class="carousel-text">
                             <h1>Best <span>Quality</span> Ingredients</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                                Bringing real food traditions to the hearts of food lovers.
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="menu">View Menu</a>
@@ -55,10 +55,10 @@
                             <img src="img/carousel-2.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>World’s <span>Best</span> Chef</h1>
+                            <h1>Your <span>Wondrful </span> Flavors </h1>
                             <p>
-                                Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
-                            </p>
+                            We want you to sit down and enjoy your meal just like the way you enjoy your homemade dishes! We have embarked on this journey and e are glad that you have taken the time off of your schedule to know our story to experience our experience.
+                             </p>
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="">View Menu</a>
                                 <a class="btn custom-btn" href="">Book Table</a>
@@ -71,9 +71,10 @@
                         </div>
                         <div class="carousel-text">
                             <h1>Fastest Order <span>Delivery</span></h1>
-                            <p>
-                                Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
-                            </p>
+                               <p>
+                                   We understand the value of your time, and that’s why we are committed to delivering your orders at lightning speed. Whether it’s a quick snack or a full meal, we ensure that your food reaches you fresh and fast, so you can enjoy every bite without any delay!
+                              </p>
+
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="">View Menu</a>
                                 <a class="btn custom-btn" href="">Book Table</a>
@@ -85,16 +86,6 @@
         </div>
         <!-- Carousel End -->
         
-        
-      
-
-        
-        
-        
-        
-        
-        
-        
         <!-- Food Start -->
         <div class="food">
             <div class="container">
@@ -102,30 +93,27 @@
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-burger"></i>
-                            <h2>Burgers</h2>
+                            <h2>Appetizers</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
+                                Start your meal with our mouth-watering appetizers, featuring a variety of flavors that will whet your appetite. From crispy bites to flavorful soups, there’s something for everyone to enjoy before the main course.</p>
                             <a href="">View Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-snack"></i>
-                            <h2>Snacks</h2>
+                            <h2>Main Courses</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
+                            Indulge in our hearty and satisfying main courses, crafted with the freshest ingredients and packed with bold flavors. Whether you crave local specialties or international delights, we have something to satisfy every palate. </p>
                             <a href="">View Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-cocktail"></i>
-                            <h2>Beverages</h2>
+                            <h2>Desserts & Beverages</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
+                               Treat yourself to our selection of delightful desserts and refreshing beverages. From sweet treats to thirst-quenching drinks, our menu offers the perfect ending to your meal.</p>
                             <a href="">View Menu</a>
                         </div>
                     </div>
