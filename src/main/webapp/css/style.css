@@ -90,10 +90,8 @@ a:focus {
     margin-left: 0;
 }
 
-
-/**********************************/
 /*********** Nav Bar CSS **********/
-/**********************************/
+
 .navbar {
     position: relative;
     transition: .5s;
@@ -213,9 +211,8 @@ a:focus {
 }
 
 
-/*******************************/
+
 /********** Hero CSS ***********/
-/*******************************/
 .carousel {
     position: relative;
     width: 100%;
@@ -362,15 +359,14 @@ a:focus {
 }
 
 
-/*******************************/
 /******* Page Header CSS *******/
-/*******************************/
+
 .page-header {
     position: relative;
     margin-bottom: 45px;
     padding: 150px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/header-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

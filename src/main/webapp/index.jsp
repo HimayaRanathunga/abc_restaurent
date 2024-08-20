@@ -92,7 +92,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-burger"></i>
+                            <i class="flaticon-snack"></i>
                             <h2>Appetizers</h2>
                             <p>
                                 Start your meal with our mouth-watering appetizers, featuring a variety of flavors that will whet your appetite. From crispy bites to flavorful soups, there’s something for everyone to enjoy before the main course.</p>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-snack"></i>
+                            <i class="flaticon-burger"></i>
                             <h2>Main Courses</h2>
                             <p>
                             Indulge in our hearty and satisfying main courses, crafted with the freshest ingredients and packed with bold flavors. Whether you crave local specialties or international delights, we have something to satisfy every palate. </p>
@@ -147,9 +147,8 @@
                                         </div>
                                     </div>
                                     </c:forEach>
-                                </div>
-                                <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="img/menu-burger-img.jpg" alt="Image">
+                                </div>                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="img/menu.jpg" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -172,41 +171,29 @@
                             <img src="img/testimonial-1.jpg" alt="Image">
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
+                           The food at ABC Restaurent is absouletly amazing ! I have never had such a flavorful meal, and the atmosphere is so welcoming . I cannot wait to come back </p>
+                        <h2>Sehansa</h2>
+                        <h3>Food Blogger</h3>
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
                             <img src="img/testimonial-2.jpg" alt="Image">
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
+                           A perfect place for a family dinner. The service is top-notch, </p>
+                        <h2>Tehan Perera </h2>
+                        <h3>Travel Enthusiat </h3>
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
                             <img src="img/testimonial-3.jpg" alt="Image">
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
+                            I was blown away by the quality of the ingredients and the creativity of the menu. The chef is a true artist, and every dish is a masterpiece!</p>
+                        <h2>Shen Kosta</h2>
+                        <h3>Chef and Restaurateur</h3>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
-                    </div>
+
                 </div>
             </div>
         </div>
