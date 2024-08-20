@@ -47,25 +47,22 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img">
-                            <img src="img/about.jpg" alt="Image">
-                            <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
+                            <img src="img/about-image.jpg" alt="Image">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-header">
                                 <p>About Us</p>
-                                <h2>Cooking Since 1990</h2>
+                                <h2>Cooking Since 2000 </h2>
                             </div>
                             <div class="about-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                                </p>
+                                    At ABC Restaurent, we have been delighting taste buds since 1990. What started as a small family venture has grown into a cherished local destination known for its fresh ingredients, passion for authentic flavors, and a warm, welcoming atmosphere.</p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                    For over three decades, we have blended culinary traditions with innovation, offering an unforgettable dining experience that celebrates both comfort food and contemporary dishes. From our hand-selected ingredients to the meticulous care we put into every dish, we believe that great food begins with passion and ends with shared memories.
                                 </p>
+                                <p> Whether you are a long-time guest or a new friend, we are committed to providing you with an exceptional meal and experience. Join us in celebrating our love for food, family, and community, and taste the difference that comes with cooking from the heart.</p>
                                 <a class="btn custom-btn" href="booking">Book A Table</a>
                             </div>
                         </div>
