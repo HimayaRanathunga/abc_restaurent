@@ -10,6 +10,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
 
     <body>
@@ -26,15 +27,19 @@
             </div>
         </div>
 
-        <!-- Search Bar Start -->
-        <div class="container mt-3 mb-4">
-            <div class="row">
-                <div class="col-12">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." onkeyup="filterProducts()">
-                </div>
+<!-- Search Bar Start -->
+<div class="container mt-3 mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
+                </span>
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." onkeyup="filterProducts()">
             </div>
         </div>
-        <!-- Search Bar End -->
+    </div>
+</div>
 
 <!-- Menu Start -->
 <div class="menu py-5">

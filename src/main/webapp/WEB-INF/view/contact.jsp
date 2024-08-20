@@ -63,7 +63,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Address</h3>
-                                <p>123 Street, NY, USA</p>
+                                <p>123/2, Kandy Lane, Kandy</p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Call Us</h3>
-                                <p>+012 345 6789</p>
+                                <p>+94 70 200 4051</p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="contact-text">
                                 <h3>Email Us</h3>
-                                <p>info@example.com</p>
+                                <p>abc@restaurent.com</p>
                             </div>
                         </div>
                     </div>

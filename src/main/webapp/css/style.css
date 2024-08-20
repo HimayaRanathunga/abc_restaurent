@@ -481,7 +481,7 @@ a:focus {
 
 .booking .booking-form {
     padding: 60px 30px;
-    background: #fbaf32;
+    background: #719a0a;
 }
 
 .booking .booking-form .control-group {
@@ -495,7 +495,7 @@ a:focus {
     background: none;
     top: 15px;
     right: 15px;
-    color: #ffffff;
+    color: #719a0a;
     font-size: 14px;
 }
 
@@ -529,7 +529,7 @@ a:focus {
 
 .booking .booking-form .btn.custom-btn {
     width: 100%;
-    color: #fbaf32;
+    color:#719a0a;
     background: #ffffff;
     border: 1px solid #ffffff;
 }
