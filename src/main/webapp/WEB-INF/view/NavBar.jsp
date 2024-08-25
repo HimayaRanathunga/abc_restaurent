@@ -43,7 +43,7 @@
                         <a href="booking" class="nav-item nav-link">Booking</a>
                          <a href="galleryuser" class="nav-item nav-link">Gallery</a>
                         <a href="contact" class="nav-item nav-link">Contact</a>
-                         <a href="login.jsp" class="nav-item nav-link"> LOGIN <i class="fas fa-users"> </i></a>
+                         <a href="login.jsp" class="nav-item nav-link"> LOGIN <i class="fas fa-user"> </i></a>
                     </div>
                 </div>
             </div>

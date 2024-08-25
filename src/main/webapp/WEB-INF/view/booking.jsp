@@ -20,7 +20,8 @@
         <%@ include file="NavBar.jsp" %>
         
         <!-- Page Header Start -->
-        <div class="page-header mb-0">
+            <div class="page-header" style="background-image: url('img/image2.jpeg'); background-size: cover; background-position: center;">
+         
             <div class="container">
                 <div class="row">
                     <div class="col-12">
