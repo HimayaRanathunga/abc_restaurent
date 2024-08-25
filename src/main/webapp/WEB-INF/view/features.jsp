@@ -8,10 +8,8 @@
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
-        <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
-        <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
@@ -21,8 +19,6 @@
 
     <body>
         <%@ include file="NavBar.jsp" %>
-
-        <!-- Page Header Start -->
 
         <div class="page-header" style="background-image: url('img/image03.jpeg'); background-size: cover; background-position: center;">
             <div class="container">
@@ -37,10 +33,7 @@
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
         
-
-        <!-- Feature Start -->
         <div class="feature">
             <div class="container">
                 <div class="row">
@@ -67,8 +60,7 @@
                                 </div>
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Phasel nec preti mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor, auctor id gravida condime, viverra quis sem. Curabit non nisl nec nisi sceleri maximus 
-                            </p>
+                                At ABC Restaurant, we pride ourselves on offering a dining experience like no other. From our diverse menu to the ambiance of our dining spaces, we ensure every visit is memorable. </p>
                             <a class="btn custom-btn" href="booking">Book A Table</a>
                         </div>
                     </div>
@@ -90,7 +82,6 @@
                 </div>
             </div>
         </div>
-        <!-- Feature End -->
         
         <%@ include file="Footer.jsp" %>
 
@@ -100,7 +91,6 @@
         <script src="lib/tempusdominus/js/moment.min.js"></script>
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-        <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
 </html>

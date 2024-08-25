@@ -44,7 +44,6 @@ public class UserDAO {
         return null;
     }
     
-    // Method to fetch all users
     public List<User> getAllUsers() throws SQLException {
         List<User> userList = new ArrayList<>();
         String sql = "SELECT * FROM users";
@@ -64,7 +63,6 @@ public class UserDAO {
         return userList;
     }
 
-    // Method to delete a user by ID
     public void deleteUser(int userId) throws SQLException {
         String sql = "DELETE FROM users WHERE user_id = ?";
         try (Connection connection = DBConnection.getConnection();

@@ -25,11 +25,10 @@ public class GalleryController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Get the action parameter and handle null case
         String action = request.getParameter("action");
 
         if (action == null) {
-            action = "list";  // Default action when null
+            action = "list"; 
         }
 
         try {
@@ -56,7 +55,7 @@ public class GalleryController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
-            action = "list";  // Default action when null in POST requests
+            action = "list";  
         }
 
         try {

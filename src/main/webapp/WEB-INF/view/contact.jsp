@@ -8,21 +8,17 @@
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
-        <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
-        <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
         <%@ include file="NavBar.jsp" %>
 
-        <!-- Page Header Start -->
             <div class="page-header" style="background-image: url('img/image05 (1).jpg'); background-size: cover; background-position: center;">
             <div class="container">
                 <div class="row">
@@ -36,9 +32,7 @@
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
-
-        <!-- Display Success or Error Message -->
+        
         <div class="container mt-4">
             <c:if test="${not empty param.success}">
                 <div class="alert alert-success" role="alert">
@@ -52,7 +46,6 @@
             </c:if>
         </div>
 
-        <!-- Contact Start -->
         <div class="contact">
             <div class="container">
                 <div class="row align-items-center contact-information">
@@ -138,9 +131,7 @@
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
 
-        <!-- Reviews Section Start -->
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12">
@@ -165,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- Submit a Review Section -->
             <div class="row mt-5">
                 <div class="col-12">
                     <h3>Submit Your Review</h3>
@@ -196,11 +186,9 @@
                 </div>
             </div>
         </div>
-        <!-- Reviews Section End -->
 
         <%@ include file="Footer.jsp" %>
-
-        <!-- JavaScript Libraries -->
+        
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/tempusdominus/js/moment.min.js"></script>

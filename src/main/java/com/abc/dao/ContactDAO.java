@@ -26,7 +26,6 @@ public class ContactDAO {
         }
     }
 
-    // Retrieve all contact messages
     public List<ContactMessage> getAllMessages() throws SQLException {
         List<ContactMessage> messages = new ArrayList<>();
         String query = "SELECT * FROM contact_messages";

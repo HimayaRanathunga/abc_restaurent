@@ -20,13 +20,11 @@ public class ContactController extends HttpServlet {
         contactService = new ContactService();
     }
 
-    // Handle GET requests to display the contact form
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/contact.jsp").forward(request, response); // Forward to the contact form
+        request.getRequestDispatcher("/WEB-INF/view/contact.jsp").forward(request, response); 
     }
 
-    // Handle POST requests for form submission
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
@@ -38,11 +36,9 @@ public class ContactController extends HttpServlet {
 
         try {
             contactService.saveContactMessage(contactMessage);
-            // Redirect with success message
             response.sendRedirect("contact?success=Message+sent+successfully!");
         } catch (Exception e) {
             e.printStackTrace();
-            // Redirect with error message
             response.sendRedirect("contact?error=Failed+to+send+message.");
         }
     }

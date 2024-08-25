@@ -17,7 +17,6 @@ public class Feature {
         this.imageUrl = imageUrl;
     }
 
-    // Getters and setters for each property
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

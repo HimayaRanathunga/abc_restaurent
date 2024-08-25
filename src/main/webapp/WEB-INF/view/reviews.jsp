@@ -25,6 +25,20 @@
                 </div>
             </div>
         </div>
+        
+                <!-- Display Success or Error Message -->
+        <div class="container mt-4">
+            <c:if test="${not empty param.success}">
+                <div class="alert alert-success" role="alert">
+                    ${param.success}
+                </div>
+            </c:if>
+            <c:if test="${not empty param.error}">
+                <div class="alert alert-danger" role="alert">
+                    ${param.error}
+                </div>
+            </c:if>
+        </div>
 
         <!-- Reviews Section Start -->
         <div class="container mt-5">

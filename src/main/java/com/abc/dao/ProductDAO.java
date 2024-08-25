@@ -11,7 +11,6 @@ import com.abc.model.Product;
 
 public class ProductDAO {
 
-    // Create (Insert)
     public void addProduct(Product product) throws SQLException {
         String sql = "INSERT INTO products (name, description, price, image_url) VALUES (?, ?, ?, ?)";
         try (Connection connection = DBConnection.getConnection();
@@ -24,7 +23,6 @@ public class ProductDAO {
         }
     }
 
-    // Read (Select All)
     public List<Product> getAllProducts() throws SQLException {
         List<Product> productList = new ArrayList<>();
         String sql = "SELECT * FROM products";
@@ -44,7 +42,6 @@ public class ProductDAO {
         return productList;
     }
 
-    // Read (Select by ID)
     public Product getProductById(int productId) throws SQLException {
         String sql = "SELECT * FROM products WHERE product_id = ?";
         try (Connection connection = DBConnection.getConnection();
@@ -65,7 +62,6 @@ public class ProductDAO {
         return null;
     }
 
-    // Update
     public void updateProduct(Product product) throws SQLException {
         String sql = "UPDATE products SET name = ?, description = ?, price = ?, image_url = ? WHERE product_id = ?";
         try (Connection connection = DBConnection.getConnection();
@@ -79,7 +75,6 @@ public class ProductDAO {
         }
     }
 
-    // Delete
     public void deleteProduct(int productId) throws SQLException {
         String sql = "DELETE FROM products WHERE product_id = ?";
         try (Connection connection = DBConnection.getConnection();

@@ -8,12 +8,10 @@ import java.util.List;
 
 public class FeatureDAO {
 
-    // Use the existing DBConnection class for getting database connections
     private Connection getConnection() throws SQLException {
-        return DBConnection.getConnection();  // Use the DBConnection class
+        return DBConnection.getConnection();  
     }
 
-    // Add a new feature to the database
     public void addFeature(Feature feature) throws SQLException {
         String sql = "INSERT INTO features (title, description, icon, image_url) VALUES (?, ?, ?, ?)";
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -25,7 +23,6 @@ public class FeatureDAO {
         }
     }
 
-    // Update an existing feature in the database
     public void updateFeature(Feature feature) throws SQLException {
         String sql = "UPDATE features SET title = ?, description = ?, icon = ?, image_url = ? WHERE id = ?";
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -38,7 +35,6 @@ public class FeatureDAO {
         }
     }
 
-    // Delete a feature from the database by ID
     public void deleteFeature(int id) throws SQLException {
         String sql = "DELETE FROM features WHERE id = ?";
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -47,7 +43,6 @@ public class FeatureDAO {
         }
     }
 
-    // Retrieve a feature by its ID
     public Feature getFeatureById(int id) throws SQLException {
         String sql = "SELECT * FROM features WHERE id = ?";
         try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -61,7 +56,6 @@ public class FeatureDAO {
         return null;
     }
 
-    // Retrieve all features from the database
     public List<Feature> getAllFeatures() throws SQLException {
         List<Feature> features = new ArrayList<>();
         String sql = "SELECT * FROM features";

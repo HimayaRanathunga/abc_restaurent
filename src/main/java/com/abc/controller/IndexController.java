@@ -19,7 +19,6 @@ public class IndexController extends HttpServlet {
         productService = new ProductService();
     }
 
-    // Handle GET requests
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         try {
@@ -31,9 +30,8 @@ public class IndexController extends HttpServlet {
         }
     }
 
-    // Handle POST requests (optional, depending on your design)
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        doGet(request, response);  // Delegate to the doGet method
+        doGet(request, response); 
     }
 }

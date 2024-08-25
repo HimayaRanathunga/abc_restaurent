@@ -14,12 +14,10 @@ public class ContactService {
         contactDAO = new ContactDAO();
     }
 
-    // Method to save a contact message
     public void saveContactMessage(ContactMessage contactMessage) throws SQLException {
         contactDAO.saveContactMessage(contactMessage);
     }
 
-    // Method to retrieve all contact messages
     public List<ContactMessage> getAllMessages() throws SQLException {
         return contactDAO.getAllMessages();
     }

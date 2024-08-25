@@ -25,13 +25,10 @@ public class FeatureUserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            // Fetch the list of features from the database
             List<Feature> featureList = featureService.getAllFeatures();
             
-            // Set the feature list as a request attribute to pass it to the JSP page
             request.setAttribute("featureList", featureList);
             
-            // Forward the request to the JSP page for display
             request.getRequestDispatcher("/WEB-INF/view/features.jsp").forward(request, response);
         } catch (SQLException e) {
             throw new ServletException("Cannot retrieve features", e);
@@ -40,6 +37,6 @@ public class FeatureUserController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response); // Handle POST requests as GET requests in this case
+        doGet(request, response); 
     }
 }

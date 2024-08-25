@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/about") // Changed from "/contact" to "/about"
+@WebServlet("/about") 
 public class AboutController extends HttpServlet {
     private static final long serialVersionUID = 1L;
        
@@ -15,15 +15,13 @@ public class AboutController extends HttpServlet {
         super();
     }
 
-    // Handle GET request to display the "About Us" page
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/about.jsp").forward(request, response); // Forward to the about.jsp
+        request.getRequestDispatcher("/WEB-INF/view/about.jsp").forward(request, response); 
     }
 
-    // Optionally handle POST requests (or redirect them to the GET method)
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response); // Redirect POST requests to GET method
+        doGet(request, response); 
     }
 }

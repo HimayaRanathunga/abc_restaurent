@@ -121,17 +121,15 @@ public class FeatureController extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
 
-        Feature feature = featureService.getFeatureById(id); // Get the existing feature
+        Feature feature = featureService.getFeatureById(id); 
 
         Part iconPart = request.getPart("icon");
         Part imagePart = request.getPart("image");
 
-        // Upload directories
         String uploadPath = getServletContext().getRealPath("") + File.separator + "uploads";
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) uploadDir.mkdir();
 
-        // Save files only if they were uploaded
         if (iconPart != null && iconPart.getSize() > 0) {
             String iconFileName = iconPart.getSubmittedFileName();
             iconPart.write(uploadPath + File.separator + iconFileName);

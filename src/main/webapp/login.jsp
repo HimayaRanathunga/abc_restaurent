@@ -8,7 +8,9 @@
     <!-- Custom CSS for styling -->
     <style>
         body {
-           background: linear-gradient(135deg, #ffe5b4, #ff6f00);
+            background-image: url('img/carousel-1.jpg');
+            background-size: cover; 
+            background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;

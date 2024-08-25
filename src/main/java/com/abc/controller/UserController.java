@@ -26,7 +26,7 @@ public class UserController extends HttpServlet {
         String action = request.getParameter("action");
         
         if (action == null) {
-            action = "list"; // Default action
+            action = "list"; 
         }
 
         try {

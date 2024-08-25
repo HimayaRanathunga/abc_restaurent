@@ -49,12 +49,6 @@
             font-weight: bold;
         }
 
-        p {
-            text-align: center;
-            font-size: 18px;
-            color: #666;
-        }
-
         .card {
             background-color: #f7f7f7;
             border-radius: 10px;
@@ -62,7 +56,6 @@
             padding: 20px;
             text-align: center;
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .card-header {
@@ -92,22 +85,10 @@
             background-color: #00aaff;
             color: white;
             border: none;
-            transition: background-color 0.3s ease;
         }
 
         .btn-primary:hover {
             background-color: #008ecc;
-        }
-
-        .btn-success {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-success:hover {
-            background-color: #218838;
         }
 
         .btn-danger {
@@ -115,7 +96,6 @@
             color: white;
             border: none;
             margin-top: 20px;
-            transition: background-color 0.3s ease;
         }
 
         .btn-danger:hover {

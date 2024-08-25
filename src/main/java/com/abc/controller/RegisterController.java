@@ -25,7 +25,7 @@ public class RegisterController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
-        String role = request.getParameter("role");  // Fetch the role selected in the form
+        String role = request.getParameter("role");  
 
         User user = new User(username, password, email, role);
 
