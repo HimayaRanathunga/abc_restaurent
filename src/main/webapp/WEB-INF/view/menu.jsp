@@ -87,48 +87,43 @@
 
 <!-- Custom CSS for Enhancements -->
 <style>
-    .menu {
-        background-color: #f8f9fa;
-    }
+.menu {
+    background-color: #f0f4f7; /* Softer background for better contrast */
+    padding: 50px 0; /* Increase padding for a more spacious layout */
+}
 
-    .menu-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.menu-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px; /* Softer corners */
+    background-color: #fff; /* Add background color to menu items */
+    overflow: hidden; /* Ensure any overflow is hidden */
+}
 
-    .menu-item:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Increase shadow depth on hover */
+}
 
-    .menu-img {
+
+.menu-img {
     position: relative;
     overflow: hidden;
-    border-radius: 15px; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); 
-    transition: box-shadow 0.3s ease, transform 0.4s ease;
-    }
+    border-radius: 10px; /* Match with the container's border radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .menu-img img {
+.menu-img img {
     width: 100%;
     height: auto;
     transition: transform 0.4s ease, filter 0.4s ease; 
-    border-radius: inherit; 
-    }
-
-    .menu-img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .menu-img:hover img {
-    filter: grayscale(0%); 
-    transform: scale(1.1); 
-    }
-
-.menu-img:hover .overlay {
-    opacity: 1;
-    transform: scale(1); /* Ensures the overlay scales perfectly with the image */
+    border-radius: inherit;
 }
+
+.menu-img:hover img {
+    filter: grayscale(0%); 
+    transform: scale(1.05); /* Slight zoom for a subtle hover effect */
+}
+
 
 .overlay {
     position: absolute;
@@ -136,83 +131,90 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay with 60% opacity */
+    background-color: rgba(0, 0, 0, 0.6); /* More contrast on overlay */
     opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for the overlay */
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1.1); /* Start with a larger scale for smooth appearance on hover */
+    transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
-.overlay .add-to-cart-btn {
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.8);
+.menu-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.add-to-cart-btn {
+    background-color: rgba(255, 255, 255, 0.9);
     border: none;
-    padding: 10px 20px; /* Larger padding for better visibility */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button hover effect */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-.overlay .add-to-cart-btn:hover {
+.add-to-cart-btn:hover {
     background-color: #007bff;
     color: #fff;
 }
 
-.menu-img:hover .overlay {
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
+.menu-text {
+    padding: 20px;
+    text-align: center;
 }
+    .product-name {
+    font-size: 1.3rem; /* Slightly larger for emphasis */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    }
 
+    .product-description {
+    font-size: 1rem; /* More legible size */
+    color: #666;
+    margin-bottom: 15px;
+    }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    .product-price {
+    font-size: 1.2rem;
+    font-weight: 700; /* Make price more prominent */
+    color: #e74c3c;
+    }
+
+    .btn-primary {
+       background-color: #28a745;
+    border-color: #28a745;
+    font-size: 16px;
+    font-weight: 600;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for the overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
+    .btn-primary:hover {
+        background-color: #218838;
+        transform: scale(1.02);
+    }
 
+    @media (max-width: 768px) {
+    .menu-text {
+        padding: 15px;
+    }
+
+    .product-item {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
 
     .product-name {
-        font-size: 1.2rem;
-        color: #333;
+        font-size: 1.1rem;
     }
 
     .product-description {
         font-size: 0.9rem;
-        color: #777;
     }
 
     .product-price {
         font-size: 1.1rem;
-        font-weight: 600;
     }
-
-    .btn-primary {
-        background-color: #007bff;
-        border-color: #2ecc71  ;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3;
-        border-color: #2ecc71 ;
-    }
-
-    @media (max-width: 768px) {
-        .menu-text {
-            padding: 20px;
-        }
-
-        .product-item {
-            margin-bottom: 20px;
-        }
     }
 </style>
 

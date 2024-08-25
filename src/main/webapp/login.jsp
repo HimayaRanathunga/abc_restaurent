@@ -8,7 +8,7 @@
     <!-- Custom CSS for styling -->
     <style>
         body {
-            background: linear-gradient(135deg, #f8f9fa, #007bff);
+           background: linear-gradient(135deg, #ffe5b4, #ff6f00);
             height: 100vh;
             display: flex;
             align-items: center;
@@ -44,8 +44,8 @@
         }
 
         .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
+            background-color: #ff6f00;
+            border-color: white;
             border-radius: 30px;
             padding: 10px 20px;
             width: 100%;
@@ -53,7 +53,7 @@
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: #ffe5b4;
         }
 
         .btn-primary:focus {
@@ -65,7 +65,7 @@
         }
 
         .mt-2 a {
-            color: #007bff;
+            color: #ff6f00;
             text-decoration: none;
             transition: color 0.3s ease;
         }

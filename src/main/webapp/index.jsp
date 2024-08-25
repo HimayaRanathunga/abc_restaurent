@@ -96,7 +96,7 @@
                             <h2>Appetizers</h2>
                             <p>
                                 Start your meal with our mouth-watering appetizers, featuring a variety of flavors that will whet your appetite. From crispy bites to flavorful soups, there’s something for everyone to enjoy before the main course.</p>
-                            <a href="">View Menu</a>
+                           
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -105,7 +105,7 @@
                             <h2>Main Courses</h2>
                             <p>
                             Indulge in our hearty and satisfying main courses, crafted with the freshest ingredients and packed with bold flavors. Whether you crave local specialties or international delights, we have something to satisfy every palate. </p>
-                            <a href="">View Menu</a>
+                          
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -114,7 +114,6 @@
                             <h2>Desserts & Beverages</h2>
                             <p>
                                Treat yourself to our selection of delightful desserts and refreshing beverages. From sweet treats to thirst-quenching drinks, our menu offers the perfect ending to your meal.</p>
-                            <a href="">View Menu</a>
                         </div>
                     </div>
                 </div>
@@ -168,7 +167,6 @@
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image">
                         </div>
                         <p>
                            The food at ABC Restaurent is absouletly amazing ! I have never had such a flavorful meal, and the atmosphere is so welcoming . I cannot wait to come back </p>
@@ -177,7 +175,6 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image">
                         </div>
                         <p>
                            A perfect place for a family dinner. The service is top-notch, </p>
@@ -186,7 +183,6 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image">
                         </div>
                         <p>
                             I was blown away by the quality of the ingredients and the creativity of the menu. The chef is a true artist, and every dish is a masterpiece!</p>

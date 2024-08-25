@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Contact Us</h2>
+                        <h2>Contact Us & Reviews</h2>
                     </div>
                     <div class="col-12">
                         <a href="">Home</a>
@@ -139,6 +139,64 @@
             </div>
         </div>
         <!-- Contact End -->
+
+        <!-- Reviews Section Start -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-list">
+                        <c:forEach var="review" items="${reviewList}">
+                            <div class="review-item border rounded p-3 mb-4 shadow-sm">
+                                <h5 class="review-author">${review.author}</h5>
+                                <p class="text-muted mb-2">${review.date}</p>
+                                <div class="review-rating mb-2">
+                                    <c:forEach var="i" begin="1" end="${review.rating}">
+                                        <i class="fas fa-star text-warning"></i>
+                                    </c:forEach>
+                                    <c:forEach var="i" begin="1" end="${5 - review.rating}">
+                                        <i class="far fa-star text-warning"></i>
+                                    </c:forEach>
+                                </div>
+                                <p>${review.comment}</p>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit a Review Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3>Submit Your Review</h3>
+                    <form action="submitReview" method="post" class="p-4 border rounded shadow-sm">
+                        <div class="form-group">
+                            <label for="author">Name</label>
+                            <input type="text" name="author" class="form-control" id="author" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rating">Rating</label>
+                            <select name="rating" id="rating" class="form-control" required>
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Very Good</option>
+                                <option value="3">3 - Good</option>
+                                <option value="2">2 - Fair</option>
+                                <option value="1">1 - Poor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                            <textarea name="comment" id="comment" rows="4" class="form-control" placeholder="Share your experience" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Reviews Section End -->
 
         <%@ include file="Footer.jsp" %>
 

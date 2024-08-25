@@ -7,7 +7,7 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background: linear-gradient(135deg, #007bff, #00c6ff); /* Gradient background */
+            background: linear-gradient(135deg, #ffe5b4, #ff6f00);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -71,7 +71,7 @@
 
         /* Button Styling */
         .btn-primary {
-            background-color: #007bff;
+            background-color: #ff6f00;
             border-color: #007bff;
             border-radius: 30px;
             padding: 12px 20px;
