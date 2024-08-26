@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -158,7 +158,7 @@
 
             <div class="row mt-5">
                 <div class="col-12">
-                    <h3>Submit Your Review</h3>
+                    <h1>Submit Your Review Here !</h1>
                     <form action="submitReview" method="post" class="p-4 border rounded shadow-sm">
                         <div class="form-group">
                             <label for="author">Name</label>
