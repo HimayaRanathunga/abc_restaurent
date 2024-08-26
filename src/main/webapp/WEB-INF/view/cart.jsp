@@ -15,7 +15,6 @@
     <body>
         <%@ include file="NavBar.jsp" %>
         
-        <!-- Page Header Start -->
         <div class="page-header">
             <div class="container">
                 <div class="row">
@@ -26,7 +25,6 @@
             </div>
         </div>
 
-        <!-- Cart Start -->
         <div class="cart">
             <div class="container">
                 <table class="table table-striped">
@@ -75,7 +73,6 @@
                 <a href="checkout.jsp" class="btn btn-success">Checkout</a>
             </div>
         </div>
-        <!-- Cart End -->
 
         <%@ include file="Footer.jsp" %>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

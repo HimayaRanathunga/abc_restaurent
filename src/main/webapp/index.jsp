@@ -31,7 +31,6 @@
 
 <%@ include file="/WEB-INF/view/NavBar.jsp" %>
 
-        <!-- Carousel Start -->
         <div class="carousel">
             <div class="container-fluid">
                 <div class="owl-carousel">
@@ -84,9 +83,7 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
-        
-        <!-- Food Start -->
+
         <div class="food">
             <div class="container">
                 <div class="row align-items-center">
@@ -119,10 +116,56 @@
                 </div>
             </div>
         </div>
-        <!-- Food End -->
         
-        
-        <!-- Menu Start -->
+        <div class="special-offers my-5">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Exclusive Deals</p>
+                    <h2>Special Offers Just For You</h2>
+                </div>
+                <div class="row">
+                    <!-- Sample Offer 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="offer-item card h-100">
+                            <img src="img/offer1.jpg" class="card-img-top" alt="Summer Special">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Summer Special</h3>
+                                <p class="card-text">Enjoy a refreshing summer combo of cold drinks and fresh salads.</p>
+                                <h4><strong>20%</strong> Off</h4>
+                                <a href="offer1-details" class="btn custom-btn mt-3">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Offer 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="offer-item card h-100">
+                            <img src="img/offer2.jpg" class="card-img-top" alt="Family Feast">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Family Feast</h3>
+                                <p class="card-text">Get a large family meal for the price of a medium-sized combo.</p>
+                                <h4><strong>Buy 1 Get 1 Free</strong></h4>
+                                <a href="offer2-details" class="btn custom-btn mt-3">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Offer 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="offer-item card h-100">
+                            <img src="img/offer3.jpg" class="card-img-top" alt="Happy Hour Deals">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Happy Hour Deals</h3>
+                                <p class="card-text">Get a 50% discount on all drinks between 4 PM and 6 PM every day!</p>
+                                <h4><strong>50%</strong> Off</h4>
+                                <a href="offer3-details" class="btn custom-btn mt-3">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="menu">
             <div class="container">
                 <div class="section-header text-center">

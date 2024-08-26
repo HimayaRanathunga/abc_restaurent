@@ -8,21 +8,17 @@
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
-        <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
 
-        <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
         <%@ include file="NavBar.jsp" %>
 
-<!-- Page Header Start -->
 <div class="page-header" style="background-image: url('img/header-image.png'); background-size: cover; background-position: center;">
 
             <div class="container">
@@ -37,12 +33,8 @@
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
-        
-        
 
-
-        <!-- About Start -->
+        
         <div class="about">
             <div class="container">
                 <div class="row align-items-center">
@@ -71,20 +63,15 @@
                 </div>
             </div>
         </div>
-        <!-- About End -->
-        
-        
-        
+
 
         <%@ include file="Footer.jsp" %>
 
-        <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/tempusdominus/js/moment.min.js"></script>
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-        <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
 </html>

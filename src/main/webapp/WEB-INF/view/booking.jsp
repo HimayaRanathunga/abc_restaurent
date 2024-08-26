@@ -19,7 +19,6 @@
     <body>
         <%@ include file="NavBar.jsp" %>
         
-        <!-- Page Header Start -->
             <div class="page-header" style="background-image: url('img/image2.jpeg'); background-size: cover; background-position: center;">
          
             <div class="container">
@@ -34,23 +33,19 @@
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
-        
-        <!-- Display Success Message -->
+
         <c:if test="${not empty successMessage}">
             <div class="alert alert-success" role="alert">
                 ${successMessage}
             </div>
         </c:if>
 
-        <!-- Display Error Message -->
         <c:if test="${not empty errorMessage}">
             <div class="alert alert-danger" role="alert">
                 ${errorMessage}
             </div>
         </c:if>
 
-        <!-- Booking Form -->
         <div class="booking">
             <div class="container">
                 <div class="row align-items-center">
@@ -129,17 +124,14 @@
                 </div>
             </div>
         </div>
-        <!-- Booking End -->
         
         <%@ include file="Footer.jsp" %>
 
-        <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/tempusdominus/js/moment.min.js"></script>
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-        <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
 </html>

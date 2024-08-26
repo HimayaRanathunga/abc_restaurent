@@ -845,6 +845,42 @@ a:focus {
     font-weight: 700;
 }
 
+.special-offers {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.offer-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+}
+
+.offer-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.offer-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.offer-item h4 {
+    color: #ff4b2b;
+    font-weight: bold;
+}
+
+.special-offers .custom-btn {
+    background-color: #ff4b2b;
+    color: white;
+}
+
+.special-offers .custom-btn:hover {
+    background-color: #ff6f61;
+}
 
 
 .menu {
