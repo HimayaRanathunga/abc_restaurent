@@ -20,7 +20,8 @@ public class CartController extends HttpServlet {
     private ProductService productService;
     private OrderService orderService;
 
-    public void init() {
+    @Override
+    public void init() throws ServletException {
         productService = new ProductService();
         orderService = new OrderService();
     }
@@ -202,7 +203,7 @@ public class CartController extends HttpServlet {
         // Clear the cart after the order is placed
         session.removeAttribute("cart");
 
-        // Redirect to a confirmation page (you need to create confirmation.jsp)
+        // Redirect to a confirmation page
         response.sendRedirect("confirmation.jsp");
     }
 }

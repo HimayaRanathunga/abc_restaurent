@@ -27,18 +27,18 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         .container {
             background: #ffffff;
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            max-width: 900px;
+            max-width: 1200px;
             width: 100%;
         }
 
@@ -90,6 +90,16 @@
         .btn-primary:hover {
             background-color: #008ecc;
         }
+        
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
 
         .btn-danger {
             background-color: #dc3545;
@@ -104,12 +114,14 @@
 
         .management-section {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
         }
 
         .management-card {
-            width: 30%;
+            width: calc(33.33% - 20px);
+            flex-grow: 1;
         }
 
         /* Responsive */
@@ -134,67 +146,93 @@
         <!-- Logout Button -->
         <a href="index" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
-        <!-- User Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3> <i class="fas fa-users"></i> User Management</h3>
+  <div class="management-section">
+            <!-- User Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-users"></i> User Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="user" class="btn btn-primary"><i class="fas fa-eye"></i> View All Users</a>
+                        <a href="register.jsp" class="btn btn-success mt-3"><i class="fas fa-user-plus"></i> Add New User</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="user" class="btn btn-primary"> <i class="fas fa-eye"></i>  View All Users</a>
-                <a href="register.jsp" class="btn btn-success mt-3"> <i class="fas fa-user-plus"></i>  Add New User</a>
-            </div>
-        </div>
 
-        <!-- Food Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3> <i class="fas fa-hamburger"></i> Food Management</h3>
+            <!-- Food Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-hamburger"></i> Food Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="product" class="btn btn-primary"><i class="fas fa-eye"></i> View All Food</a>
+                        <a href="product?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Food</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="product" class="btn btn-primary"> <i class="fas fa-eye"></i> View All Food</a>
-                <a href="product?action=new" class="btn btn-success mt-3"> <i class="fas fa-plus"></i> Add New Food</a>
-            </div>
-        </div>
 
-        <!-- Reservation Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3> <i class="fas fa-calendar-alt"></i> Reservation Management</h3>
+            <!-- Reservation Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-calendar-alt"></i> Reservation Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="adminBooking" class="btn btn-primary"><i class="fas fa-eye"></i> View All Reservations</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="adminBooking" class="btn btn-primary"> <i class="fas fa-eye"></i> View All Reservations</a>
-            </div>
-        </div>
 
-        <!-- Feature Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3><i class="fas fa-tools"></i> Feature Management</h3>
+            <!-- Feature Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-tools"></i> Feature Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="featuresadmin" class="btn btn-primary"><i class="fas fa-eye"></i> View All Features</a>
+                        <a href="featuresadmin?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Feature</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="featuresadmin" class="btn btn-primary"> <i class="fas fa-eye"></i> View All Features</a>
-                <a href="featuresadmin?action=new" class="btn btn-success mt-3"> <i class="fas fa-plus"></i> Add New Feature</a>
-            </div>
-        </div>
 
-        <!-- Gallery Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3> <i class="fas fa-images"></i> Gallery Management</h3>
+            <!-- Gallery Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-images"></i> Gallery Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="gallery" class="btn btn-primary"><i class="fas fa-eye"></i> View All Galleries</a>
+                        <a href="gallery?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Gallery</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="gallery" class="btn btn-primary"> <i class="fas fa-eye"></i> View All Gallery</a>
-                <a href="gallery?action=new" class="btn btn-success mt-3"> <i class="fas fa-plus"></i> Add New Gallery</a>
-            </div>
-        </div>
 
-        <!-- Message Management Section -->
-        <div class="card">
-            <div class="card-header">
-                <h3> <i class="fas fa-envelope"></i> Message Management</h3>
+            <!-- Checkout Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-shopping-cart"></i> Checkout Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="checkout" class="btn btn-primary"><i class="fas fa-eye"></i> View All Checkouts</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="adminmessages" class="btn btn-primary">  <i class="fas fa-eye"></i> View All Messages</a>
+
+            <!-- Message Management -->
+            <div class="management-card">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-envelope"></i> Message Management</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="adminmessages" class="btn btn-primary"><i class="fas fa-eye"></i> View All Messages</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
