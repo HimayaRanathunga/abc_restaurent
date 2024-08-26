@@ -70,7 +70,7 @@
                     </tbody>
                 </table>
                 <h3>Total: <c:out value="${totalPrice}" /></h3>
-                <a href="checkout.jsp" class="btn btn-success">Checkout</a>
+                <a href="checkout" class="btn btn-success">Checkout</a>
             </div>
         </div>
 

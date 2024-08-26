@@ -53,7 +53,7 @@ public class AdminOrderController extends HttpServlet {
         request.setAttribute("orders", orders);
 
         // Forward to admin orders JSP page
-        request.getRequestDispatcher("/WEB-INF/view/admin/orders.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/orders.jsp").forward(request, response);
     }
 
     private void viewOrderDetails(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
@@ -68,7 +68,7 @@ public class AdminOrderController extends HttpServlet {
         request.setAttribute("orderItems", orderItems);
 
         // Forward to admin order details JSP page
-        request.getRequestDispatcher("/WEB-INF/view/admin/orderDetails.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/orderDetails.jsp").forward(request, response);
     }
 
     private void deleteOrder(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
