@@ -118,7 +118,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2>ADD NEW USER</h2>
+        <h2>Register</h2>
         <form action="register" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -134,12 +134,11 @@
             </div>
             
             <!-- Role Selection Dropdown -->
-            <div class="form-group">
-                <label for="role">Role:</label>
-                <select class="form-control form-control-select" id="role" name="role" required>
-                
-                    <option value="staff">Staff</option>
-                    <option value="admin">Admin</option>
+            <div class="form-group hidden">
+                <label for="role" hidden>Role:</label>
+                <select class="form-control form-control-select" id="role"  hidden name="role" required>
+                <option value="customer" hidden>Customer</option>
+                   
                 </select>
             </div>
             
