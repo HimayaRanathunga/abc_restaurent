@@ -70,7 +70,9 @@
                     </tbody>
                 </table>
                 <h3>Total: <c:out value="${totalPrice}" /></h3>
-                <a href="checkout" class="btn btn-success">Checkout</a>
+                <div class="text-right">
+            <a href="cart?action=checkout" class="btn btn-warning">Proceed to Checkout</a>
+        </div>
             </div>
         </div>
 

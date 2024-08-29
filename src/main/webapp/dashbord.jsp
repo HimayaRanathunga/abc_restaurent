@@ -197,6 +197,26 @@
                     </div>
                 </div>
             </div>
+            
+            
+            <div class="management-card">
+    <div class="card">
+        <div class="card-header">
+            <h3><i class="fas fa-tags"></i> Promotion Management</h3>
+        </div>
+        <div class="card-body">
+            <a href="promotions" class="btn btn-primary">
+                <i class="fas fa-eye"></i> View All Promotions
+            </a>
+            <a href="promotions?action=new" class="btn btn-success mt-3">
+                <i class="fas fa-plus"></i> Add New Promotion
+            </a>
+        </div>
+    </div>
+</div>
+            
+
+
 
             <!-- Gallery Management -->
             <div class="management-card">
@@ -211,17 +231,34 @@
                 </div>
             </div>
 
-            <!-- Checkout Management -->
-            <div class="management-card">
-                <div class="card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-shopping-cart"></i> Checkout Management</h3>
-                    </div>
-                    <div class="card-body">
-                        <a href="checkout" class="btn btn-primary"><i class="fas fa-eye"></i> View All Checkouts</a>
-                    </div>
-                </div>
+           
+            
+<div class="management-card mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h3><i class="fas fa-box"></i> Order Management</h3>
             </div>
+            <div class="card-body">
+                <a href="adminOrders" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> View All Orders
+                </a>
+            </div>
+        </div>
+</div>
+
+<div class="management-card">
+    <div class="card">
+        <div class="card-header">
+            <h3><i class="fas fa-comments"></i> Feedback Management</h3>
+        </div>
+        <div class="card-body">
+            <a href="adminFeedback" class="btn btn-primary">
+                <i class="fas fa-eye"></i> View All Feedback
+            </a>
+        </div>
+    </div>
+</div>
+
 
             <!-- Message Management -->
             <div class="management-card">

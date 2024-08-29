@@ -1,5 +1,6 @@
 package com.abc.controller;
 
+import com.abc.model.Customer;
 import com.abc.model.Product;
 import com.abc.service.ProductService;
 import com.abc.service.OrderService;
@@ -183,6 +184,14 @@ public class CartController extends HttpServlet {
         String phone = request.getParameter("phone");
         String paymentMethod = request.getParameter("paymentMethod");
 
+        Customer customer = new Customer();
+        customer.setFullName(fullName);
+        customer.setEmail(email);
+        customer.setAddress(address);
+        customer.setCity(city);
+        customer.setZipCode(zipCode);
+        customer.setPhone(phone);
+
         double totalPrice = 0;
         if (cart != null) {
             for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
@@ -191,7 +200,7 @@ public class CartController extends HttpServlet {
         }
 
         // Store order and order items in the database
-        int orderId = orderService.createOrder(fullName, email, address, city, zipCode, phone, paymentMethod, totalPrice);
+        int orderId = orderService.createOrder(customer, paymentMethod, totalPrice);
 
         // Insert each cart item into the `order_items` table
         if (cart != null) {

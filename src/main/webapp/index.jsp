@@ -118,53 +118,29 @@
         </div>
         
         <div class="special-offers my-5">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Exclusive Deals</p>
-                    <h2>Special Offers Just For You</h2>
-                </div>
-                <div class="row">
-                    <!-- Sample Offer 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="offer-item card h-100">
-                            <img src="img/offer1.jpg" class="card-img-top" alt="Summer Special">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Summer Special</h3>
-                                <p class="card-text">Enjoy a refreshing summer combo of cold drinks and fresh salads.</p>
-                                <h4><strong>20%</strong> Off</h4>
-                                <a href="offer1-details" class="btn custom-btn mt-3">Claim Offer</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Sample Offer 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="offer-item card h-100">
-                            <img src="img/offer2.jpg" class="card-img-top" alt="Family Feast">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Family Feast</h3>
-                                <p class="card-text">Get a large family meal for the price of a medium-sized combo.</p>
-                                <h4><strong>Buy 1 Get 1 Free</strong></h4>
-                                <a href="offer2-details" class="btn custom-btn mt-3">Claim Offer</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Sample Offer 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="offer-item card h-100">
-                            <img src="img/offer3.jpg" class="card-img-top" alt="Happy Hour Deals">
-                            <div class="card-body text-center">
-                                <h3 class="card-title">Happy Hour Deals</h3>
-                                <p class="card-text">Get a 50% discount on all drinks between 4 PM and 6 PM every day!</p>
-                                <h4><strong>50%</strong> Off</h4>
-                                <a href="offer3-details" class="btn custom-btn mt-3">Claim Offer</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Exclusive Deals</p>
+            <h2>Special Offers Just For You</h2>
         </div>
+        <div class="row">
+            <c:forEach var="promotion" items="${promotionList}">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="offer-item card h-100">
+                        <img src="${promotion.imageUrl}" class="card-img-top" alt="${promotion.title}">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">${promotion.title}</h3>
+                            <p class="card-text">${promotion.description}</p>
+                            <h4><strong>${promotion.offRate}%</strong> Off</h4>
+                            <a href="menu" class="btn custom-btn mt-3">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+</div>
+
 
         <div class="menu">
             <div class="container">
@@ -208,30 +184,15 @@
         <div class="testimonial">
             <div class="container">
                 <div class="owl-carousel testimonials-carousel">
+                    <c:forEach var="feedback" items="${feedbackList}">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
                         </div>
-                        <p>
-                           The food at ABC Restaurent is absouletly amazing ! I have never had such a flavorful meal, and the atmosphere is so welcoming . I cannot wait to come back </p>
-                        <h2>Sehansa</h2>
-                        <h3>Food Blogger</h3>
+                         <p>${feedback.comments}</p>
+                        <h2>${feedback.name}</h2>
+                        <h3>${feedback.email}</h3>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                        </div>
-                        <p>
-                           A perfect place for a family dinner. The service is top-notch, </p>
-                        <h2>Tehan Perera </h2>
-                        <h3>Travel Enthusiat </h3>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                        </div>
-                        <p>
-                            I was blown away by the quality of the ingredients and the creativity of the menu. The chef is a true artist, and every dish is a masterpiece!</p>
-                        <h2>Shen Kosta</h2>
-                        <h3>Chef and Restaurateur</h3>
-                    </div>
+                     </c:forEach>
 
                 </div>
             </div>
