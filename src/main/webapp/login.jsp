@@ -97,7 +97,7 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
-            <p class="mt-2">Don't have an account? <a href="register.jsp">Register</a></p>
+            <p class="mt-2">Don't have an account? <a href="registerCustommer.jsp">Register</a></p>
         </form>
     </div>
 </body>

@@ -144,7 +144,7 @@
         <p>Welcome, <%= user.getUsername() %>! You are logged in as <%= user.getRole() %>.</p>
 
         <!-- Logout Button -->
-        <a href="index" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        <a href="logout" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
         <div class="management-section">
             <!-- Sections accessible by both admin and staff -->

@@ -23,6 +23,8 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Initialize totalIncome to 0 -->
+                <c:set var="totalIncome" value="0" />
                 <c:forEach var="order" items="${orders}">
                     <tr>
                         <td>${order.orderId}</td>
@@ -35,9 +37,16 @@
                             <a href="orders?action=deleteOrder&orderId=${order.orderId}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
+                    <!-- Accumulate the total income -->
+                    <c:set var="totalIncome" value="${totalIncome + order.totalPrice}" />
                 </c:forEach>
             </tbody>
         </table>
+
+        <!-- Display the total income -->
+        <div class="text-right">
+            <h4>Total Income: $<c:out value="${totalIncome}" /></h4>
+        </div>
     </div>
 </body>
 </html>

@@ -154,6 +154,12 @@
   	<description></description>
   	<servlet-class>com.abc.controller.AdminFeedbackServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LogoutController</servlet-name>
+  	<display-name>LogoutController</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.LogoutController</servlet-class>
+  </servlet>
   
   
   <servlet-mapping>
@@ -255,6 +261,10 @@
   <servlet-mapping>
   	<servlet-name>AdminFeedbackServlet</servlet-name>
   	<url-pattern>/AdminFeedbackServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutController</servlet-name>
+  	<url-pattern>/LogoutController</url-pattern>
   </servlet-mapping>
   
 </web-app>

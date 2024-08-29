@@ -37,7 +37,7 @@ public class LoginController extends HttpServlet {
                 if ("admin".equals(role) || "staff".equals(role)) {
                     response.sendRedirect("dashbord.jsp");
                 } else {
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("cart");
                 }
             } else {
                 response.sendRedirect("login.jsp?error=Invalid credentials");
