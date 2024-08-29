@@ -184,30 +184,15 @@
         <div class="testimonial">
             <div class="container">
                 <div class="owl-carousel testimonials-carousel">
+                    <c:forEach var="feedback" items="${feedbackList}">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
                         </div>
-                        <p>
-                           The food at ABC Restaurent is absouletly amazing ! I have never had such a flavorful meal, and the atmosphere is so welcoming . I cannot wait to come back </p>
-                        <h2>Sehansa</h2>
-                        <h3>Food Blogger</h3>
+                         <p>${feedback.comments}</p>
+                        <h2>${feedback.name}</h2>
+                        <h3>${feedback.email}</h3>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                        </div>
-                        <p>
-                           A perfect place for a family dinner. The service is top-notch, </p>
-                        <h2>Tehan Perera </h2>
-                        <h3>Travel Enthusiat </h3>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                        </div>
-                        <p>
-                            I was blown away by the quality of the ingredients and the creativity of the menu. The chef is a true artist, and every dish is a masterpiece!</p>
-                        <h2>Shen Kosta</h2>
-                        <h3>Chef and Restaurateur</h3>
-                    </div>
+                     </c:forEach>
 
                 </div>
             </div>

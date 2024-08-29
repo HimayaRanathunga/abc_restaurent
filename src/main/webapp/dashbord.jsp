@@ -246,6 +246,20 @@
         </div>
 </div>
 
+<div class="management-card">
+    <div class="card">
+        <div class="card-header">
+            <h3><i class="fas fa-comments"></i> Feedback Management</h3>
+        </div>
+        <div class="card-body">
+            <a href="adminFeedback" class="btn btn-primary">
+                <i class="fas fa-eye"></i> View All Feedback
+            </a>
+        </div>
+    </div>
+</div>
+
+
             <!-- Message Management -->
             <div class="management-card">
                 <div class="card">

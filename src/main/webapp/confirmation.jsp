@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order Confirmation</title>
+    <title>Order Confirmation & Feedback</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
@@ -46,9 +46,30 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            margin-bottom: 20px;
         }
         .back-home-btn:hover {
             background-color: #0056b3;
+        }
+        .feedback-form {
+            text-align: left;
+            margin-top: 30px;
+        }
+        .feedback-form h4 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .feedback-form .form-group {
+            margin-bottom: 15px;
+        }
+        .feedback-form .btn-primary {
+            background-color: #28a745;
+            border: none;
+        }
+        .feedback-form .btn-primary:hover {
+            background-color: #218838;
         }
     </style>
 
@@ -66,14 +87,10 @@
             <br><br>
             You will be redirected to the homepage in 5 seconds.
         </div>
-        <a href="index.jsp" class="back-home-btn">Back to Home</a>
-    </div>
+        <a href="index" class="back-home-btn">Back to Home</a>
 
-    <!-- JavaScript for additional redirection (optional, as a fallback) -->
-    <script>
-        setTimeout(function() {
-            window.location.href = 'index.jsp';
-        }, 5000); // Redirect after 5 seconds
-    </script>
+        
+        
+    </div>
 </body>
 </html>
