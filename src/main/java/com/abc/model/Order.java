@@ -1,24 +1,26 @@
 package com.abc.model;
 
-import java.sql.Timestamp;
+import java.util.List;
 
 public class Order {
     private int orderId;
-    private String fullName;
-    private String email;
+    private Customer customer;
     private double totalPrice;
-    private Timestamp orderDate;
+    private String paymentMethod;
+    private String orderStatus;
+    private List<OrderItem> orderItems;
 
-    // Constructor
-    public Order(int orderId, String fullName, String email, double totalPrice, Timestamp orderDate) {
+    // Constructors, getters, and setters
+    public Order() {}
+
+    public Order(int orderId, Customer customer, double totalPrice, String paymentMethod, String orderStatus) {
         this.orderId = orderId;
-        this.fullName = fullName;
-        this.email = email;
+        this.customer = customer;
         this.totalPrice = totalPrice;
-        this.orderDate = orderDate;
+        this.paymentMethod = paymentMethod;
+        this.orderStatus = orderStatus;
     }
 
-    // Getters and setters
     public int getOrderId() {
         return orderId;
     }
@@ -27,20 +29,12 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public String getFullName() {
-        return fullName;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public double getTotalPrice() {
@@ -51,11 +45,27 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
-    public Timestamp getOrderDate() {
-        return orderDate;
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 
-    public void setOrderDate(Timestamp orderDate) {
-        this.orderDate = orderDate;
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
     }
 }
