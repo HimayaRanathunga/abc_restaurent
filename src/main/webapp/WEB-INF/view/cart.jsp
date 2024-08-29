@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="page-header">
+   <div class="page-header" style="background-image: url('img/image03.jpeg'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="row">
                 <div class="col-12">

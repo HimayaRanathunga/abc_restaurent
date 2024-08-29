@@ -156,9 +156,8 @@
                                 <div class="col-lg-7 col-md-12">
                                  <c:forEach var="product" items="${productList}">
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                        					<img src="${product.imageUrl}" alt="${product.name}" class="img-fluid">
-                                        </div>
+<img src="${product.imageUrl}" alt="${product.name}" 
+         style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-right: 15px;">
                                         <div class="menu-text">
                                             <h3><span>${product.name}</span> <strong>${product.price}</strong></h3>
                                             <p>${product.description}</p>

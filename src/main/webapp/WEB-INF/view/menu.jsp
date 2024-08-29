@@ -17,7 +17,7 @@
     <%@ include file="NavBar.jsp" %>
 
     <!-- Page Header Start -->
-    <div class="page-header text-center" style="background-image: url('img/image04.jpg'); background-size: cover; background-position: center;">
+    <div class="page-header text-center" style="background-image: url('img/image2.jpeg'); background-size: cover; background-position: center;">
         <div class="container">
             <h2 class="text-white">Our Menu</h2>
         </div>
