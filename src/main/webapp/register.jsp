@@ -118,7 +118,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2>Register</h2>
+        <h2>ADD NEW USER</h2>
         <form action="register" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -137,7 +137,7 @@
             <div class="form-group">
                 <label for="role">Role:</label>
                 <select class="form-control form-control-select" id="role" name="role" required>
-                    <option value="customer">Customer</option>
+                
                     <option value="staff">Staff</option>
                     <option value="admin">Admin</option>
                 </select>

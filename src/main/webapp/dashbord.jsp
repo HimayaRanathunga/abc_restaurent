@@ -3,7 +3,7 @@
 <%@ page session="true" %>
 <%
     User user = (User) session.getAttribute("user");
-    if (user == null || !"admin".equals(user.getRole())) {
+    if (user == null || (!"admin".equals(user.getRole()) && !"staff".equals(user.getRole()))) {
         response.sendRedirect("login.jsp");
         return;
     }
@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title><%= user.getRole() %> Panel</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -140,27 +140,14 @@
 </head>
 <body>
     <div class="container">
-        <h2> <i class="fas fa-user-cog"></i> Admin Panel</h2>
+        <h2> <i class="fas fa-user-cog"></i> <%= user.getRole() %> Panel</h2>
         <p>Welcome, <%= user.getUsername() %>! You are logged in as <%= user.getRole() %>.</p>
 
         <!-- Logout Button -->
         <a href="index" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
-  <div class="management-section">
-            <!-- User Management -->
-            <div class="management-card">
-                <div class="card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-users"></i> User Management</h3>
-                    </div>
-                    <div class="card-body">
-                        <a href="user" class="btn btn-primary"><i class="fas fa-eye"></i> View All Users</a>
-                        <a href="register.jsp" class="btn btn-success mt-3"><i class="fas fa-user-plus"></i> Add New User</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Food Management -->
+        <div class="management-section">
+            <!-- Sections accessible by both admin and staff -->
             <div class="management-card">
                 <div class="card">
                     <div class="card-header">
@@ -168,12 +155,13 @@
                     </div>
                     <div class="card-body">
                         <a href="product" class="btn btn-primary"><i class="fas fa-eye"></i> View All Food</a>
-                        <a href="product?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Food</a>
+                        <% if ("admin".equals(user.getRole())) { %>
+                            <a href="product?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Food</a>
+                        <% } %>
                     </div>
                 </div>
             </div>
 
-            <!-- Reservation Management -->
             <div class="management-card">
                 <div class="card">
                     <div class="card-header">
@@ -185,92 +173,97 @@
                 </div>
             </div>
 
-            <!-- Feature Management -->
-            <div class="management-card">
+            <div class="management-card mt-4">
                 <div class="card">
                     <div class="card-header">
-                        <h3><i class="fas fa-tools"></i> Feature Management</h3>
+                        <h3><i class="fas fa-box"></i> Order Management</h3>
                     </div>
                     <div class="card-body">
-                        <a href="featuresadmin" class="btn btn-primary"><i class="fas fa-eye"></i> View All Features</a>
-                        <a href="featuresadmin?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Feature</a>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="management-card">
-    <div class="card">
-        <div class="card-header">
-            <h3><i class="fas fa-tags"></i> Promotion Management</h3>
-        </div>
-        <div class="card-body">
-            <a href="promotions" class="btn btn-primary">
-                <i class="fas fa-eye"></i> View All Promotions
-            </a>
-            <a href="promotions?action=new" class="btn btn-success mt-3">
-                <i class="fas fa-plus"></i> Add New Promotion
-            </a>
-        </div>
-    </div>
-</div>
-            
-
-
-
-            <!-- Gallery Management -->
-            <div class="management-card">
-                <div class="card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-images"></i> Gallery Management</h3>
-                    </div>
-                    <div class="card-body">
-                        <a href="gallery" class="btn btn-primary"><i class="fas fa-eye"></i> View All Galleries</a>
-                        <a href="gallery?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Gallery</a>
+                        <a href="adminOrders" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View All Orders
+                        </a>
                     </div>
                 </div>
             </div>
 
-           
-            
-<div class="management-card mt-4">
-        <div class="card">
-            <div class="card-header">
-                <h3><i class="fas fa-box"></i> Order Management</h3>
-            </div>
-            <div class="card-body">
-                <a href="adminOrders" class="btn btn-primary">
-                    <i class="fas fa-eye"></i> View All Orders
-                </a>
-            </div>
-        </div>
-</div>
-
-<div class="management-card">
-    <div class="card">
-        <div class="card-header">
-            <h3><i class="fas fa-comments"></i> Feedback Management</h3>
-        </div>
-        <div class="card-body">
-            <a href="adminFeedback" class="btn btn-primary">
-                <i class="fas fa-eye"></i> View All Feedback
-            </a>
-        </div>
-    </div>
-</div>
-
-
-            <!-- Message Management -->
-            <div class="management-card">
-                <div class="card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-envelope"></i> Message Management</h3>
-                    </div>
-                    <div class="card-body">
-                        <a href="adminmessages" class="btn btn-primary"><i class="fas fa-eye"></i> View All Messages</a>
+            <!-- Sections accessible only by admin -->
+            <% if ("admin".equals(user.getRole())) { %>
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users"></i> User Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="user" class="btn btn-primary"><i class="fas fa-eye"></i> View All Users</a>
+                            <a href="register.jsp" class="btn btn-success mt-3"><i class="fas fa-user-plus"></i> Add New User</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tools"></i> Feature Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="featuresadmin" class="btn btn-primary"><i class="fas fa-eye"></i> View All Features</a>
+                            <a href="featuresadmin?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Feature</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tags"></i> Promotion Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="promotions" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> View All Promotions
+                            </a>
+                            <a href="promotions?action=new" class="btn btn-success mt-3">
+                                <i class="fas fa-plus"></i> Add New Promotion
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-images"></i> Gallery Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="gallery" class="btn btn-primary"><i class="fas fa-eye"></i> View All Galleries</a>
+                            <a href="gallery?action=new" class="btn btn-success mt-3"><i class="fas fa-plus"></i> Add New Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-comments"></i> Feedback Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="adminFeedback" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> View All Feedback
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="management-card">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-envelope"></i> Message Management</h3>
+                        </div>
+                        <div class="card-body">
+                            <a href="adminmessages" class="btn btn-primary"><i class="fas fa-eye"></i> View All Messages</a>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
         </div>
     </div>
 </body>
