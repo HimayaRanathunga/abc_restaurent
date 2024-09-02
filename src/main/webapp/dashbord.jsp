@@ -14,71 +14,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= user.getRole() %> Panel</title>
-    <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    
-    <!-- Custom CSS -->
     <style>
-        /* General Styling */
         body {
-            background: #1e90ff;
+            background: linear-gradient(135deg, #f8f9fa 50%, #ffffff 50%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
         }
 
         .container {
             background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             max-width: 1200px;
             width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-image: url('img/background1.jpg'); * Add the background image here */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
             text-align: center;
             color: #333;
-            margin-bottom: 30px;
-            font-weight: bold;
+            margin-bottom: 40px;
+            font-weight: 700;
+            font-size: 2.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .card {
-            background-color: #f7f7f7;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 30px;
             padding: 20px;
             text-align: center;
             border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         .card-header {
-            background-color: #00aaff;
+            background: linear-gradient(135deg, #FF9874, #FF6235);
             color: white;
             padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 10px 10px 0 0;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 12px 12px 0 0;
         }
 
         .card-body {
-            padding: 20px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
 
         .btn {
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 6px;
             font-size: 16px;
             font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
         }
 
         .btn-primary {
@@ -89,38 +106,41 @@
 
         .btn-primary:hover {
             background-color: #008ecc;
+            transform: translateY(-3px);
         }
         
         .btn-success {
-            background-color: #28a745;
+            background-color: #FF9874;
             color: white;
             border: none;
         }
 
         .btn-success:hover {
-            background-color: #218838;
+            background-color: #FF8343;
+            transform: translateY(-3px);
         }
 
         .btn-danger {
-            background-color: #dc3545;
+            background-color: #FF6235;
             color: white;
             border: none;
             margin-top: 20px;
         }
 
         .btn-danger:hover {
-            background-color: #c82333;
+            background-color: #e53a1a;
+            transform: translateY(-3px);
         }
 
         .management-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 20px;
+            gap: 25px;
         }
 
         .management-card {
-            width: calc(33.33% - 20px);
+            width: calc(33.33% - 25px);
             flex-grow: 1;
         }
 
@@ -147,7 +167,6 @@
         <a href="logout" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
 
         <div class="management-section">
-            <!-- Sections accessible by both admin and staff -->
             <div class="management-card">
                 <div class="card">
                     <div class="card-header">

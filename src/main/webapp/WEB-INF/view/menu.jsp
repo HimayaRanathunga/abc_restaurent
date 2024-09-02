@@ -16,15 +16,12 @@
 <body>
     <%@ include file="NavBar.jsp" %>
 
-    <!-- Page Header Start -->
     <div class="page-header text-center" style="background-image: url('img/image2.jpeg'); background-size: cover; background-position: center;">
         <div class="container">
             <h2 class="text-white">Our Menu</h2>
         </div>
     </div>
-    <!-- Page Header End -->
 
-    <!-- Search Bar Start -->
     <div class="container mt-4 mb-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -37,9 +34,7 @@
             </div>
         </div>
     </div>
-    <!-- Search Bar End -->
 
-    <!-- Menu Start -->
     <div class="menu py-5 bg-light">
         <div class="container">
             <div class="row" id="productList">
@@ -72,14 +67,12 @@
             </div>
         </div>
     </div>
-    <!-- Menu End -->
 
     <%@ include file="Footer.jsp" %>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript for Search Filter -->
     <script>
         function filterProducts() {
             var input = document.getElementById('searchInput').value.toLowerCase();
@@ -98,7 +91,6 @@
         }
     </script>
 
-    <!-- Custom CSS -->
     <style>
         /* General Styling */
         .menu {

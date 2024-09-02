@@ -15,7 +15,6 @@
 <body>
     <%@ include file="NavBar.jsp" %>
 
-    <!-- Login or Guest Mode Modal HTML -->
     <div class="modal fade" id="loginGuestModal" tabindex="-1" role="dialog" aria-labelledby="loginGuestModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

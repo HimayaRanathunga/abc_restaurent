@@ -9,10 +9,8 @@
         <meta content="Free Website Template" name="description">
 
         <link href="img/favicon.ico" rel="icon">
-
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
         <link href="css/style.css" rel="stylesheet">
     </head>
 
@@ -33,7 +31,6 @@
             </div>
         </div>
         
-         <!-- Display success/error messages -->
     <div class="container mt-4">
         <c:if test="${not empty param.success}">
             <div class="alert alert-success" role="alert">
@@ -134,7 +131,6 @@
         </div>
         
                 
-<!-- Feedback Form -->
     <div class="container mt-4">
         <form action="submitFeedback" method="post">
             <div class="form-group">
@@ -171,7 +167,6 @@
         <script src="lib/tempusdominus/js/moment.min.js"></script>
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-        <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
 </html>

@@ -2,9 +2,8 @@
 <html>
 <head>
     <title>Register</title>
-    <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    
     <style>
         body {
             background: linear-gradient(135deg, #ffe5b4, #ff6f00);
