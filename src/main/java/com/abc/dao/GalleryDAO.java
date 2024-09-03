@@ -8,7 +8,6 @@ import java.util.List;
 
 public class GalleryDAO {
 
-    // Add a new gallery item
     public void insertGallery(Gallery gallery) throws SQLException {
         String sql = "INSERT INTO gallery (title, description, image_url) VALUES (?, ?, ?)";
 
@@ -21,7 +20,6 @@ public class GalleryDAO {
         }
     }
 
-    // Get all gallery items
     public List<Gallery> getAllGalleries() throws SQLException {
         List<Gallery> galleries = new ArrayList<>();
         String sql = "SELECT * FROM gallery";
@@ -42,7 +40,6 @@ public class GalleryDAO {
         return galleries;
     }
 
-    // Get a gallery item by ID
     public Gallery getGalleryById(int id) throws SQLException {
         String sql = "SELECT * FROM gallery WHERE id = ?";
         Gallery gallery = null;
@@ -64,7 +61,6 @@ public class GalleryDAO {
         return gallery;
     }
 
-    // Update an existing gallery item
     public void updateGallery(Gallery gallery) throws SQLException {
         String sql = "UPDATE gallery SET title = ?, description = ?, image_url = ? WHERE id = ?";
 
@@ -78,7 +74,6 @@ public class GalleryDAO {
         }
     }
 
-    // Delete a gallery item
     public void deleteGallery(int id) throws SQLException {
         String sql = "DELETE FROM gallery WHERE id = ?";
 

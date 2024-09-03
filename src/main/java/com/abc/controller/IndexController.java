@@ -9,31 +9,43 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.abc.model.Product;
+import com.abc.model.Promotion;
+import com.abc.model.Feedback;
 import com.abc.service.ProductService;
+import com.abc.service.PromotionService;
+import com.abc.service.FeedbackService;
 
 @WebServlet("/index")
 public class IndexController extends HttpServlet {
     private ProductService productService;
+    private PromotionService promotionService;
+    private FeedbackService feedbackService;
 
     public void init() throws ServletException {
         productService = new ProductService();
+        promotionService = new PromotionService();
+        feedbackService = new FeedbackService();
     }
 
-    // Handle GET requests
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         try {
             List<Product> productList = productService.getAllProducts();
+            List<Promotion> promotionList = promotionService.getAllPromotions();
+            List<Feedback> feedbackList = feedbackService.getAllFeedback();
+
             request.setAttribute("productList", productList);
+            request.setAttribute("promotionList", promotionList);
+            request.setAttribute("feedbackList", feedbackList);
+
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } catch (SQLException e) {
-            throw new ServletException("Cannot retrieve products", e);
+            throw new ServletException("Cannot retrieve products, promotions, or feedback", e);
         }
     }
 
-    // Handle POST requests (optional, depending on your design)
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        doGet(request, response);  // Delegate to the doGet method
+        doGet(request, response); 
     }
 }

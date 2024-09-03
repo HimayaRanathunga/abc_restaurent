@@ -6,13 +6,12 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/abc_restaurant_himaya";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/abc_restaurant";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_PASSWORD = "sql123";
 
     public static Connection getConnection() throws SQLException {
         try {
-            // Load MySQL driver explicitly
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             throw new SQLException("MySQL JDBC driver not found.");

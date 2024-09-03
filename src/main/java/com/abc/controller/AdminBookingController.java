@@ -18,11 +18,9 @@ public class AdminBookingController extends HttpServlet {
         bookingService = new BookingService();
     }
 
-    // Handle GET requests to display the booking management page
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        // Fetch all bookings (pending, approved, rejected, etc.)
         try {
             request.setAttribute("bookings", bookingService.getAllBookings());
             request.getRequestDispatcher("/WEB-INF/view/admin-bookings.jsp").forward(request, response);
@@ -31,7 +29,6 @@ public class AdminBookingController extends HttpServlet {
         }
     }
 
-    // Handle POST requests to update the booking status
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
@@ -48,13 +45,11 @@ public class AdminBookingController extends HttpServlet {
                 successMessage = "Booking ID " + bookingId + " has been rejected.";
             }
 
-            // Set success message
             request.setAttribute("successMessage", successMessage);
-            doGet(request, response);  // Forward back to the GET method to reload bookings
+            doGet(request, response); 
         } catch (SQLException e) {
-            // Set error message in case of failure
             request.setAttribute("errorMessage", "Error updating booking status for ID " + bookingId);
-            doGet(request, response);  // Forward back to the GET method with error
+            doGet(request, response);
         }
     }
 }

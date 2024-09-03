@@ -9,13 +9,8 @@
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
 
-        <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
-
-        <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
-        
-        <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -23,7 +18,7 @@
         <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
         <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-        <!-- Template Stylesheet -->
+
         <link href="css/style.css" rel="stylesheet">
     </head>
 
@@ -31,7 +26,6 @@
 
 <%@ include file="/WEB-INF/view/NavBar.jsp" %>
 
-        <!-- Carousel Start -->
         <div class="carousel">
             <div class="container-fluid">
                 <div class="owl-carousel">
@@ -42,7 +36,7 @@
                         <div class="carousel-text">
                             <h1>Best <span>Quality</span> Ingredients</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                                Bringing real food traditions to the hearts of food lovers.
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="menu">View Menu</a>
@@ -55,10 +49,10 @@
                             <img src="img/carousel-2.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>World’s <span>Best</span> Chef</h1>
+                            <h1>Your <span>Wondrful </span> Flavors </h1>
                             <p>
-                                Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
-                            </p>
+                            We want you to sit down and enjoy your meal just like the way you enjoy your homemade dishes! We have embarked on this journey and e are glad that you have taken the time off of your schedule to know our story to experience our experience.
+                             </p>
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="">View Menu</a>
                                 <a class="btn custom-btn" href="">Book Table</a>
@@ -67,13 +61,14 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-3.jpg" alt="Image">
+                            <img src="img/carousel-4.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Fastest Order <span>Delivery</span></h1>
-                            <p>
-                                Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
-                            </p>
+                               <p>
+                                   We understand the value of your time, and that’s why we are committed to delivering your orders at lightning speed. Whether it’s a quick snack or a full meal, we ensure that your food reaches you fresh and fast, so you can enjoy every bite without any delay!
+                              </p>
+
                             <div class="carousel-btn">
                                 <a class="btn custom-btn" href="">View Menu</a>
                                 <a class="btn custom-btn" href="">Book Table</a>
@@ -83,59 +78,65 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
-        
-        
-      
 
-        
-        
-        
-        
-        
-        
-        
-        <!-- Food Start -->
         <div class="food">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-burger"></i>
-                            <h2>Burgers</h2>
+                            <i class="flaticon-snack"></i>
+                            <h2>Appetizers</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
-                            <a href="">View Menu</a>
+                                Start your meal with our mouth-watering appetizers, featuring a variety of flavors that will whet your appetite. From crispy bites to flavorful soups, there’s something for everyone to enjoy before the main course.</p>
+                           
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-snack"></i>
-                            <h2>Snacks</h2>
+                            <i class="flaticon-burger"></i>
+                            <h2>Main Courses</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
-                            <a href="">View Menu</a>
+                            Indulge in our hearty and satisfying main courses, crafted with the freshest ingredients and packed with bold flavors. Whether you crave local specialties or international delights, we have something to satisfy every palate. </p>
+                          
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-cocktail"></i>
-                            <h2>Beverages</h2>
+                            <h2>Desserts & Beverages</h2>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasel nec pretium mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor auctor quis sem. 
-                            </p>
-                            <a href="">View Menu</a>
+                               Treat yourself to our selection of delightful desserts and refreshing beverages. From sweet treats to thirst-quenching drinks, our menu offers the perfect ending to your meal.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Food End -->
         
-        
-        <!-- Menu Start -->
+        <div class="special-offers my-5">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Exclusive Deals</p>
+            <h2>Special Offers Just For You</h2>
+        </div>
+        <div class="row">
+            <c:forEach var="promotion" items="${promotionList}">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="offer-item card h-100">
+                        <img src="${promotion.imageUrl}" class="card-img-top" alt="${promotion.title}">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">${promotion.title}</h3>
+                            <p class="card-text">${promotion.description}</p>
+                            <h4><strong>${promotion.offRate}%</strong> Off</h4>
+                            <a href="menu" class="btn custom-btn mt-3">Claim Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+</div>
+
+
         <div class="menu">
             <div class="container">
                 <div class="section-header text-center">
@@ -150,18 +151,16 @@
                                 <div class="col-lg-7 col-md-12">
                                  <c:forEach var="product" items="${productList}">
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                        					<img src="${product.imageUrl}" alt="${product.name}" class="img-fluid">
-                                        </div>
+<img src="${product.imageUrl}" alt="${product.name}" 
+         style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-right: 15px;">
                                         <div class="menu-text">
                                             <h3><span>${product.name}</span> <strong>${product.price}</strong></h3>
                                             <p>${product.description}</p>
                                         </div>
                                     </div>
                                     </c:forEach>
-                                </div>
-                                <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="img/menu-burger-img.jpg" alt="Image">
+                                </div>                                <div class="col-lg-5 d-none d-lg-block">
+                                    <img src="img/menu.jpg" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -179,46 +178,16 @@
         <div class="testimonial">
             <div class="container">
                 <div class="owl-carousel testimonials-carousel">
+                    <c:forEach var="feedback" items="${feedbackList}">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="img/testimonial-1.jpg" alt="Image">
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
+                         <p>${feedback.comments}</p>
+                        <h2>${feedback.name}</h2>
+                        <h3>${feedback.email}</h3>
                     </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                        </div>
-                        <p>
-                            Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
-                        </p>
-                        <h2>Client Name</h2>
-                        <h3>Profession</h3>
-                    </div>
+                     </c:forEach>
+
                 </div>
             </div>
         </div>

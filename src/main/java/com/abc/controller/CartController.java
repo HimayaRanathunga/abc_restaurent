@@ -1,7 +1,9 @@
 package com.abc.controller;
 
+import com.abc.model.Customer;
 import com.abc.model.Product;
 import com.abc.service.ProductService;
+import com.abc.service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,16 +19,19 @@ import java.util.Map;
 @WebServlet("/cart")
 public class CartController extends HttpServlet {
     private ProductService productService;
+    private OrderService orderService;
 
-    public void init() {
+    @Override
+    public void init() throws ServletException {
         productService = new ProductService();
+        orderService = new OrderService();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
-            action = "viewCart"; // Default action
+            action = "viewCart"; 
         }
 
         switch (action) {
@@ -34,13 +39,16 @@ public class CartController extends HttpServlet {
                 addToCart(request, response);
                 break;
             case "increase":
-                changeQuantity(request, response, 1);  // Increase quantity by 1
+                changeQuantity(request, response, 1);  
                 break;
             case "decrease":
-                changeQuantity(request, response, -1); // Decrease quantity by 1
+                changeQuantity(request, response, -1); 
                 break;
             case "remove":
                 removeFromCart(request, response);
+                break;
+            case "checkout":
+                viewCheckout(request, response);
                 break;
             case "viewCart":
             default:
@@ -49,39 +57,44 @@ public class CartController extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if ("checkout".equals(action)) {
+            try {
+                processCheckout(request, response);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private void addToCart(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
 
         int productId = Integer.parseInt(request.getParameter("productId"));
-        
-        // Handle the quantity parameter; default to 1 if not provided or invalid
-        int quantity = 1;  // Default quantity
+        int quantity = 1; 
         try {
             String quantityParam = request.getParameter("quantity");
             if (quantityParam != null && !quantityParam.isEmpty()) {
                 quantity = Integer.parseInt(quantityParam);
             }
         } catch (NumberFormatException e) {
-            // Log the exception and use the default quantity of 1
             System.err.println("Invalid quantity provided. Using default value of 1.");
         }
 
         try {
             Product product = productService.getProductById(productId);
 
-            // Retrieve the cart from session or create a new one
             Map<Product, Integer> cart = (Map<Product, Integer>) session.getAttribute("cart");
             if (cart == null) {
                 cart = new HashMap<>();
             }
 
-            // Add product to the cart or update its quantity
             cart.put(product, cart.getOrDefault(product, 0) + quantity);
 
-            // Save the cart back to the session
             session.setAttribute("cart", cart);
-
-            // Redirect back to the product list or cart view
+            
             response.sendRedirect("cart?action=viewCart");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,9 +113,9 @@ public class CartController extends HttpServlet {
                 if (product.getProductId() == productId) {
                     int newQuantity = cart.get(product) + change;
                     if (newQuantity <= 0) {
-                        cart.remove(product);  // Remove item if quantity reaches 0 or below
+                        cart.remove(product); 
                     } else {
-                        cart.put(product, newQuantity);  // Update the quantity
+                        cart.put(product, newQuantity);  
                     }
                     break;
                 }
@@ -128,6 +141,78 @@ public class CartController extends HttpServlet {
     }
 
     private void viewCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        Map<Product, Integer> cart = (Map<Product, Integer>) session.getAttribute("cart");
+
+        double totalPrice = 0;
+        if (cart != null) {
+            for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+                totalPrice += entry.getKey().getPrice() * entry.getValue();
+            }
+        }
+
+        request.setAttribute("totalPrice", totalPrice);
         request.getRequestDispatcher("/WEB-INF/view/cart.jsp").forward(request, response);
+    }
+
+    private void viewCheckout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        Map<Product, Integer> cart = (Map<Product, Integer>) session.getAttribute("cart");
+
+        double totalPrice = 0;
+        if (cart != null) {
+            for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+                totalPrice += entry.getKey().getPrice() * entry.getValue();
+            }
+        }
+
+        request.setAttribute("cart", cart);
+        request.setAttribute("totalPrice", totalPrice);
+        request.getRequestDispatcher("/WEB-INF/view/checkout.jsp").forward(request, response);
+    }
+
+    private void processCheckout(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        HttpSession session = request.getSession();
+        Map<Product, Integer> cart = (Map<Product, Integer>) session.getAttribute("cart");
+
+        // Retrieve form data
+        String fullName = request.getParameter("fullName");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        String city = request.getParameter("city");
+        String zipCode = request.getParameter("zipCode");
+        String phone = request.getParameter("phone");
+        String paymentMethod = request.getParameter("paymentMethod");
+
+        Customer customer = new Customer();
+        customer.setFullName(fullName);
+        customer.setEmail(email);
+        customer.setAddress(address);
+        customer.setCity(city);
+        customer.setZipCode(zipCode);
+        customer.setPhone(phone);
+
+        double totalPrice = 0;
+        if (cart != null) {
+            for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+                totalPrice += entry.getKey().getPrice() * entry.getValue();
+            }
+        }
+
+        // Store order and order items in the database
+        int orderId = orderService.createOrder(customer, paymentMethod, totalPrice);
+
+        // Insert each cart item into the `order_items` table
+        if (cart != null) {
+            for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+                orderService.addOrderItem(orderId, entry.getKey().getName(), entry.getKey().getPrice(), entry.getValue(), entry.getKey().getPrice() * entry.getValue());
+            }
+        }
+
+        // Clear the cart after the order is placed
+        session.removeAttribute("cart");
+
+        // Redirect to a confirmation page
+        response.sendRedirect("confirmation.jsp");
     }
 }

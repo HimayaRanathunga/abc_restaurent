@@ -27,9 +27,8 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 
-        // Handle the case where action is null
         if (action == null) {
-            action = "list"; // Default action
+            action = "list"; 
         }
 
         try {

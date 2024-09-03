@@ -1,6 +1,3 @@
-/*******************************/
-/********* General CSS *********/
-/*******************************/
 body {
     color: #757575;
     background: #ffffff;
@@ -91,9 +88,7 @@ a:focus {
 }
 
 
-/**********************************/
-/*********** Nav Bar CSS **********/
-/**********************************/
+
 .navbar {
     position: relative;
     transition: .5s;
@@ -213,9 +208,8 @@ a:focus {
 }
 
 
-/*******************************/
-/********** Hero CSS ***********/
-/*******************************/
+
+
 .carousel {
     position: relative;
     width: 100%;
@@ -362,15 +356,14 @@ a:focus {
 }
 
 
-/*******************************/
-/******* Page Header CSS *******/
-/*******************************/
+
+
 .page-header {
     position: relative;
     margin-bottom: 45px;
     padding: 150px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/header-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -421,9 +414,7 @@ a:focus {
 }
 
 
-/*******************************/
-/******* Section Header ********/
-/*******************************/
+
 .section-header {
     position: relative;
     margin-bottom: 45px;
@@ -465,9 +456,7 @@ a:focus {
 }
 
 
-/*******************************/
-/********* Booking CSS *********/
-/*******************************/
+
 .booking {
     position: relative;
     width: 100%;
@@ -485,7 +474,7 @@ a:focus {
 
 .booking .booking-form {
     padding: 60px 30px;
-    background: #fbaf32;
+    background: #719a0a;
 }
 
 .booking .booking-form .control-group {
@@ -499,7 +488,7 @@ a:focus {
     background: none;
     top: 15px;
     right: 15px;
-    color: #ffffff;
+    color: #719a0a;
     font-size: 14px;
 }
 
@@ -533,7 +522,7 @@ a:focus {
 
 .booking .booking-form .btn.custom-btn {
     width: 100%;
-    color: #fbaf32;
+    color:#719a0a;
     background: #ffffff;
     border: 1px solid #ffffff;
 }
@@ -544,9 +533,7 @@ a:focus {
 }
 
 
-/*******************************/
-/********** Menu CSS ***********/
-/*******************************/
+
 .food {
     position: relative;
     width: 100%;
@@ -634,9 +621,7 @@ a:focus {
 
 
 
-/*******************************/
-/********** About CSS **********/
-/*******************************/
+
 .about {
     position: relative;
     width: 100%;
@@ -783,9 +768,7 @@ a:focus {
 }
 
 
-/*******************************/
-/********* Feature CSS *********/
-/*******************************/
+
 .feature {
     position: relative;
     width: 100%;
@@ -862,10 +845,44 @@ a:focus {
     font-weight: 700;
 }
 
+.special-offers {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
 
-/*******************************/
-/*********** Menu CSS **********/
-/*******************************/
+.offer-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+}
+
+.offer-item img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.offer-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.offer-item h4 {
+    color: #ff4b2b;
+    font-weight: bold;
+}
+
+.special-offers .custom-btn {
+    background-color: #ff4b2b;
+    color: white;
+}
+
+.special-offers .custom-btn:hover {
+    background-color: #ff6f61;
+}
+
+
 .menu {
     position: relative;
     padding: 45px 0 15px 0;
@@ -989,9 +1006,7 @@ a:focus {
 }
 
 
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
+
 .team {
     position: relative;
     width: 100%;
@@ -1105,9 +1120,7 @@ a:focus {
 }
 
 
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
+
 .testimonial {
     position: relative;
     width: 100%;
@@ -1192,9 +1205,7 @@ a:focus {
 }
 
 
-/*******************************/
-/*********** Blog CSS **********/
-/*******************************/
+
 .blog {
     position: relative;
     width: 100%;
@@ -1295,9 +1306,6 @@ a:focus {
 }
 
 
-/*******************************/
-/******* Single Post CSS *******/
-/*******************************/
 .single {
     position: relative;
     padding: 45px 0;
@@ -1554,9 +1562,7 @@ a:focus {
 }
 
 
-/**********************************/
-/*********** Sidebar CSS **********/
-/**********************************/
+
 .sidebar {
     position: relative;
     width: 100%;
@@ -1727,9 +1733,7 @@ a:focus {
 }
 
 
-/*******************************/
-/********* Contact CSS *********/
-/*******************************/
+
 .contact {
     position: relative;
     width: 100%;
@@ -1825,9 +1829,7 @@ a:focus {
 }
 
 
-/*******************************/
-/********* Footer CSS **********/
-/*******************************/
+
 .footer {
     position: relative;
     margin-top: 45px;

@@ -13,20 +13,17 @@
 
     <a href="dashbord.jsp" class="btn btn-primary mb-3">Back</a>
 
-    <!-- Search Form -->
     <form action="adminBooking" method="get" class="form-inline mb-3">
         <input type="text" name="searchQuery" class="form-control mr-sm-2" placeholder="Search by name, email, or status" value="${param.searchQuery}">
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 
-    <!-- Display Success Message -->
     <c:if test="${not empty successMessage}">
         <div class="alert alert-success" role="alert">
             ${successMessage}
         </div>
     </c:if>
 
-    <!-- Display Error Message -->
     <c:if test="${not empty errorMessage}">
         <div class="alert alert-danger" role="alert">
             ${errorMessage}
